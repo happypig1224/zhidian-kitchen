@@ -1,0 +1,22 @@
+**/target/
+.idea
+*.iml
+*.class
+*Test.java
+**/test/
+application-dev.yml
+*.env
+
+# Logs
+*.log
+logs/
+nginx-*/logs/
+
+# Temporary files
+*.tmp
+*.temp
+.DS_Store
+
+# Build files
+build/
+dist/
