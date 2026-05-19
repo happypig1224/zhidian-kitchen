@@ -1,4 +1,3 @@
-/*
 package com.zhidian.task;
 
 import com.zhidian.entity.LocalMessage;
@@ -26,8 +25,9 @@ public class MessageScheduler {
     private List<MessageHandlerService> messageHandlers;
     
     private Map<String, MessageHandlerService> handlerMap;
-    
-    @Scheduled(fixedRate = 30000) // 30s执行一次
+
+    // TODO 改用RocketMQ实现
+    //@Scheduled(fixedRate = 30000) // 30s执行一次
     @Transactional
     public void processPendingMessages() {
         if (handlerMap == null) {
@@ -81,4 +81,3 @@ public class MessageScheduler {
         }
     }
 }
-*/

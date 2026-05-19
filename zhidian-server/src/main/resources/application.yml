@@ -1,35 +1,11 @@
 server:
   port: 8081
-  tomcat:
-    threads:
-      max: 800
-      min-spare: 100  # 最小空闲线程，减少启动延迟
-    max-connections: 2000 # 最大连接数
-    accept-count: 100    # 排队队列，设小一点，满了直接拒，不要无限排
-    connection-timeout: 20000
 
 spring:
   main:
     banner-mode: off
     lazy-initialization: true
     allow-bean-definition-overriding: true
-  ai:
-    vectorstore:
-      redis:
-        initialize-schema: true
-        index-name: zhidian-kitchen-index
-        prefix: vector-redis
-    dashscope:
-      api-key: ${ALIYUN_API_KEY}
-      embedding:
-        options:
-          model: text-embedding-v3
-
-  #    dashscope:
-#      api-key: ${zhidian.dashscope.api-key}
-#      chat:
-#        options:
-#          model: qwen-plus
   profiles:
     active: dev
   datasource:
